@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZEKE PUJOLS - Sign Up</title>
+    <meta name="description" content="The official site of Zeke Pujols. The Voice of the New Generation.">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    
+    <header class="masthead">
+      <a href="index.html" class="masthead-logo" style="text-decoration:none;">ZEKE <span>PUJOLS</span></a>
+      <div class="masthead-right">
+        <div class="issue">Issue 001</div>
+        <div>Spanglish R&B</div>
+        <div>Vol. I — 2026 Edition</div>
+      </div>
+    </header>
+
+    <nav class="nav-bar">
+        <a href="index.html" class="nav-item" style="text-decoration:none;">Home</a>        <a href="music.html" class="nav-item" style="text-decoration:none;">Music</a>        <a href="videos.html" class="nav-item" style="text-decoration:none;">Videos</a>        <a href="tour.html" class="nav-item" style="text-decoration:none;">Live</a>        <a href="merch.html" class="nav-item" style="text-decoration:none;">Shop</a>        <a href="about.html" class="nav-item" style="text-decoration:none;">About</a>                <a href="contact.html" class="nav-item active" style="text-decoration:none;">Sign Up</a>
+            <a href="community.html" class="nav-item" style="text-decoration:none;">Community</a>
+            <a href="vault.html" class="nav-item" style="text-decoration:none;">Vault</a>
+            <a href="contact-us.html" class="nav-item" style="text-decoration:none;">Contact</a>
+    </nav>
+    
+    <div class="ticker">
+      <div class="ticker-inner">
+        <span class="ticker-text">
+          ★ ZEKE PUJOLS — REMIND ME YOU EXIST OUT NOW ★ ALL PLATFORMS ★ ZEKE PUJOLS — REMIND ME YOU EXIST OUT NOW ★ ALL PLATFORMS ★ ZEKE PUJOLS — REMIND ME YOU EXIST OUT NOW ★ ALL PLATFORMS</span>
+      </div>
+    </div>
+
+    <main id="main-content" class="page-container signup-main" style="overflow: hidden;">
+      <img src="https://gallery.eousercontent.com/b874b9e4-1806-11f1-a900-21017c1a5f14%2Fmedia-manager%2F1772656586480-zekepujolstveye-078.jpg" alt="Background Texture" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+      <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.4); z-index: 1;"></div>
+      <div style="position: relative; z-index: 2; max-width: 500px; width: 100%; padding: 40px; text-align: center; color: white;">
+        <h1 style="font-family: 'Oswald', sans-serif; font-size: 48px; margin-bottom: 10px; text-transform: uppercase;">Stay Updated</h1>
+        <p style="font-size: 16px; margin-bottom: 30px;">with unreleased music, merch, and new show announcements</p>
+        
+        <form id="eo-signup-form" action="https://eomail5.com/form/6e37df48-1809-11f1-981a-e9c1d931ed89/subscribe" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+          <input type="email" id="eo-email" name="email" placeholder="Email Address" required style="padding: 15px; border: none; border-radius: 4px; font-size: 16px; width: 100%; box-sizing: border-box; font-family: 'Inter', sans-serif;">
+          <input type="text" id="eo-city" name="field_4" placeholder="City & State" style="padding: 15px; border: none; border-radius: 4px; font-size: 16px; width: 100%; box-sizing: border-box; font-family: 'Inter', sans-serif;">
+          <div style="display: none;">
+            <input type="text" name="hpc4b27b6e-eb38-11e9-be00-06b4694bee2a" tabindex="-1" autocomplete="nope">
+          </div>
+          <button type="submit" id="eo-submit-btn" style="padding: 15px; background: var(--red); color: #fff; border: none; border-radius: 4px; font-size: 16px; font-weight: bold; cursor: pointer; text-transform: uppercase; font-family: 'Inter', sans-serif;">Subscribe</button>
+          <div id="eo-form-message" style="display:none; margin-top:10px; font-size:14px;"></div>
+        </form>
+
+        <div style="margin-top: 30px; display: flex; justify-content: center; gap: 15px;">
+          <a href="https://www.instagram.com/zekepujols/" target="_blank" rel="noopener"><img src="https://gallery.eousercontent.com/tentacles/icons/v1/social-block/outlined-rounded/white/instagram.png" alt="Instagram" width="32" height="32"></a>
+          <a href="https://www.tiktok.com/@zekepujols" target="_blank" rel="noopener"><img src="https://gallery.eousercontent.com/tentacles/icons/v1/social-block/outlined-rounded/white/tiktok.png" alt="TikTok" width="32" height="32"></a>
+          <a href="https://www.facebook.com/people/Zeke-Pujols/61582439305386/" target="_blank" rel="noopener"><img src="https://gallery.eousercontent.com/tentacles/icons/v1/social-block/outlined-rounded/white/facebook.png" alt="Facebook" width="32" height="32"></a>
+        </div>
+      </div>
+
+      <script>
+        document.getElementById('eo-signup-form').addEventListener('submit', function(e) {
+          e.preventDefault();
+          const form = e.target;
+          const btn = document.getElementById('eo-submit-btn');
+          const msg = document.getElementById('eo-form-message');
+          const formData = new FormData(form);
+
+          btn.textContent = 'Sending...';
+          btn.disabled = true;
+          msg.style.display = 'none';
+
+          fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            mode: 'no-cors'
+          }).then(function() {
+            form.reset();
+            btn.textContent = 'Subscribe';
+            btn.disabled = false;
+            msg.textContent = 'Thanks for subscribing!';
+            msg.style.color = '#fff';
+            msg.style.display = 'block';
+          }).catch(function() {
+            btn.textContent = 'Subscribe';
+            btn.disabled = false;
+            msg.textContent = 'Something went wrong. Please try again.';
+            msg.style.color = '#ff4444';
+            msg.style.display = 'block';
+          });
+        });
+      </script>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">ZEKE PUJOLS</div>
+
+        </div>
+        <div>
+          <div class="footer-col-title">Navigate</div>
+          <ul class="footer-links">
+            <li><a href="index.html" style="color:inherit;text-decoration:none;">Home</a></li>
+            <li><a href="about.html" style="color:inherit;text-decoration:none;">About</a></li>
+            <li><a href="music.html" style="color:inherit;text-decoration:none;">Music</a></li>
+            <li><a href="videos.html" style="color:inherit;text-decoration:none;">Videos</a></li>
+            <li><a href="tour.html" style="color:inherit;text-decoration:none;">Live</a></li>
+            <li><a href="merch.html" style="color:inherit;text-decoration:none;">Shop</a></li>
+            <li><a href="contact.html" style="color:inherit;text-decoration:none;">Sign Up</a></li>
+            <li><a href="community.html" style="color:inherit;text-decoration:none;">Community</a></li>
+            <li><a href="vault.html" style="color:inherit;text-decoration:none;">Vault</a></li>
+            <li><a href="contact-us.html" style="color:inherit;text-decoration:none;">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Connect</div>
+          <ul class="footer-links">
+            <li><a href="https://www.instagram.com/zekepujols" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Instagram ↗</a></li>
+            <li><a href="https://open.spotify.com/artist/6DkjuCr4iY5W4ej8gO3MAG" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Spotify ↗</a></li>
+            <li><a href="https://music.apple.com/us/artist/zeke-pujols/1495642810" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Apple Music ↗</a></li>
+            <li><a href="https://www.youtube.com/@zekepujols" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">YouTube ↗</a></li>
+            <li><a href="https://soundcloud.com/zekepujols" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">SoundCloud ↗</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2026 Zeke Pujols — All Rights Reserved</div>
+
+      </div>
+    </footer>
+</body>
+</html>
