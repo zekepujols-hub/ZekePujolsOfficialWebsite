@@ -128,7 +128,7 @@
   .cover-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    min-height: 90vh;
+    min-height: auto;
     border-bottom: 4px solid var(--black);
     position: relative;
   }
@@ -139,6 +139,7 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    min-height: 70vh;
   }
 
   .cover-left::after {
@@ -247,8 +248,8 @@
   /* COVER RIGHT */
   .cover-right {
     background: var(--cream);
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto 1fr;
     border-left: 4px solid var(--black);
   }
 
@@ -287,41 +288,49 @@
   }
 
   .cover-right-body {
-    padding: 28px 32px;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    flex: 1;
+    justify-content: space-evenly;
+    flex-grow: 1;
   }
 
   .sidebar-item {
-    border-top: 2px solid var(--black);
-    padding-top: 16px;
+    border-top: 4px solid var(--black);
+    padding: 32px;
     cursor: pointer;
     transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .sidebar-item:last-child {
+    border-bottom: 4px solid var(--black);
   }
   .sidebar-item:hover { transform: translateX(6px); }
 
   .sidebar-label {
     font-family: 'Courier Prime', monospace;
-    font-size: 9px;
+    font-size: 11px;
     letter-spacing: 4px;
     text-transform: uppercase;
     color: var(--red);
-    margin-bottom: 4px;
+    margin-bottom: 8px;
   }
 
   .sidebar-title {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 28px;
+    font-size: clamp(32px, 4vw, 42px);
     line-height: 1;
     color: var(--black);
     letter-spacing: 0.5px;
+    margin-bottom: 8px;
   }
 
   .sidebar-body {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 13px;
+    font-size: clamp(15px, 1.5vw, 18px);
     color: var(--muted);
     margin-top: 5px;
     line-height: 1.5;
@@ -329,11 +338,11 @@
 
   .pg-number {
     font-family: 'Courier Prime', monospace;
-    font-size: 9px;
-    color: var(--muted);
+    font-size: 11px;
+    color: var(--black);
     letter-spacing: 2px;
     text-transform: uppercase;
-    margin-top: 6px;
+    margin-top: 16px;
   }
 
   /* SECTION DIVIDER */
@@ -429,8 +438,6 @@
     font-size: 16px;
     line-height: 1.7;
     color: #2A2018;
-    column-count: 2;
-    column-gap: 32px;
   }
 
   .article-body p { margin-bottom: 14px; }
@@ -912,7 +919,6 @@
     .cover-right { border-left: none; border-top: 4px solid var(--black); }
     .feature-section { grid-template-columns: 1fr; }
     .feature-sidebar { display: none; }
-    .article-body { column-count: 1; }
     .photo-spread { grid-template-columns: 1fr; }
     .spread-img-wrap { aspect-ratio: 16/9; }
     .disco-grid { grid-template-columns: 1fr; }
@@ -1320,9 +1326,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, .nav-item:focus-visi
   }
   .article-headline {
     font-size: clamp(40px, 12vw, 60px) !important;
-  }
-  .article-body {
-    column-count: 1 !important;
   }
   
   /* Specialized Rotations & Stacks */
