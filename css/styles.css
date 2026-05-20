@@ -1233,6 +1233,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, .nav-item:focus-visi
   .hero-footer {
     aspect-ratio: 16/9;
     background-attachment: scroll;
+    background-position: 85% center;
   }
 }
 
